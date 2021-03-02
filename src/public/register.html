@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- 引入公共样式的css 文件 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入注册页面的css 文件 -->
+    <link rel="stylesheet" href="./css/register.css">
+    <!-- 引入jquery文件 -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- 引入注册页面js文件 -->
+    <script src="./js/register.js"></script>
+    <script src="./js/ajax.js"></script>
+</head>
+
+<body>
+    <!-- 头部 开始-->
+    <div class="nav">
+        <div class="container">
+            <div class="row">
+                <h1 class="fl"><a href="register.html">Tao</a></h1>
+            </div>
+        </div>
+    </div>
+    <!-- 头部 结束 -->
+    <!-- 主体 开始 -->
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 registerarea col-md-offset-1 ">
+                    <div class="row">
+                        <div class="registerarea-top">
+                            <h3>
+                                注册新用户
+                                <em>
+                                        我有账号，去<a href="login.html">登陆</a>
+                                    </em>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 reg_form">
+                            <form action="">
+                                <ul>
+                                    <li>
+                                        <label for="tel">手机号:</label>
+                                        <input type="text" class="inp" id="tel">
+                                        <span class="">		
+                                        
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <label for="">邮箱:</label>
+                                        <input type="text" class="inp" id="email">
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <label for="">昵称:</label>
+                                        <input type="text" class="inp" id="nc">
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <label for="">短信验证码:</label>
+                                        <input type="text" class="inp" id="msg">
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <label for="">登陆密码:</label>
+                                        <input type="password" class="inp" id="pwd">
+                                        <span>
+                                            </span>
+                                    </li>
+                                    <li class="safe">
+                                        安全程度
+                                        <em class="ruo">弱</em>
+                                        <em class="zhong">中</em>
+                                        <em class="qiang">强</em>
+                                    </li>
+
+                                    <li>
+                                        <label for="">确认密码:</label>
+                                        <input type="password" class="inp" id="surepwd">
+                                        <span></span>
+                                    </li>
+                                    <li class="agree">
+                                        <input type="checkbox" id="cbx" style="width: 14px;height: 14px;">同意协议并注册
+                                        <a href="#">《木槿协议》</a>
+                                    </li>
+                                    <li>
+                                        <input type="submit" value="完成注册" class="notover" id="over" disabled />
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- 主体 结束 -->
+</body>
+
+</html>

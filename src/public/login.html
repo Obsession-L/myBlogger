@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <!-- 引入公共样式的css 文件 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入登录页面的css 文件 -->
+    <link rel="stylesheet" href="./css/login.css">
+    <!-- 引入bootstrap.css 文件 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- 引入jquery文件 -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- 引入登录页面js文件 -->
+    <script src="./js/login.js"></script>
+    <script src="./db/messages.json"></script>
+</head>
+
+<body>
+    <!-- 头部 开始-->
+    <div class="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="fl"><a href="login.html">Tao</a></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 头部 结束-->
+    <!-- header主体 -->
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <form method="POST" action="http://localhost:3000/index.html">
+                    <div class="col-md-4 col-xs-12 login">
+                        <div id="login_top" class="login-top col-md-12 col-xs-12">
+                            <a href="javascript:;" id="account_enter" class="col-md-5 login-top-a current" style="text-align: right;">
+                            账号登录
+                        </a>
+                            <span class="col-md-2"></span>
+                            <a href="javascript:;" id="code_enter" class="col-md-5 login-top-a" style="text-align: left;">
+                           扫码登录
+                        </a>
+                        </div>
+                        <div class="col-md-12 login-bottom">
+                            <div class="login-register">
+                                <input id="account" class="col-md-12 col-xs-12" type="text" placeholder="账号/邮箱/手机号">
+                                <input id="password" class="col-md-12 col-xs-12" type="password" placeholder="密码">
+                                <span id="reminder" class="reminder"></span>
+                                <button id="enter" class="col-md-12 col-xs-12 ">登录</button>
+                                <p id="phoneLogin">手机短信登录/注册</p>
+                            </div>
+                            <div class="login-reverse">
+                                <a href="./register.html" class="col-md-5 login-top-a" style="text-align: right;">
+                                   立即注册
+                                </a>
+                                <span class="col-md-2"></span>
+                                <a href="javascript:;" class="col-md-5 login-top-a" style="text-align: left;">
+                                   忘记密码?
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 点击扫码登录部分 -->
+                        <div class="col-md-12 login-bottom">开发中请稍后...</div>
+                        <!-- 点击手机验证码登录部分 -->
+                        <div class="col-md-12 login-bottom">
+                            <div class="login-register">
+                                <input id="phoneNumber" class="col-md-12 col-xs-12" type="text" placeholder="请输入11位手机号" style="width: 56%;margin-right: 10px;">
+                                <button id="sendAuthCode" class="send">发送验证码</button>
+                                <input id="authCode" class="col-md-12 col-xs-12" type="password" placeholder="验证码" style="width: 46%;">
+                                <span id="phoneReminder" class="reminder col-md-12"></span>
+                                <button id="phoneEnter" class="col-md-12 col-xs-12 ">登录</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            //$("#loaddata").click(function(){
+            $(document).ready(function() {
+                //使用getJSON方法读取json数据,
+                //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可
+                $.getJSON('./db/messages.json', function(data) {
+
+                    var html = '';
+                    $.each(data, function(i, item) {
+                        html += '<tr><td>' + item['account'] + '</td>' +
+                            '<td>' + item['password'] + '</td>' +
+                            '<td>' + item['email'] + '</td>' +
+                            '<td>';
+                    });
+                    $('#title').after(html);
+                    //after方法:在每个匹配的元素之后插入内容。
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

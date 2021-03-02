@@ -1,0 +1,141 @@
+/* 头部 css 开始 */
+
+.row a {
+    color: #333;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.row a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+
+/* header 主体css */
+
+.header {
+    height: 600px;
+    background: url(../images/login-header2.jpg) no-repeat;
+    background-size: cover;
+}
+
+.header .row {
+    position: relative;
+}
+
+.row .login {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    height: 560px;
+    background-color: #fff;
+}
+
+.login-top {
+    padding: 0;
+    padding: 26px 0 20px 0;
+    overflow: hidden;
+}
+
+.login-top .login-top-a {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.login-top a:hover {
+    color: #f56600;
+}
+
+.current {
+    color: #f56600 !important;
+}
+
+.login-top .col-md-2 {
+    width: 2px;
+    height: 24px;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    padding: 0;
+    margin: 0 28px 0 24px;
+    margin-top: 6px;
+}
+
+.login-bottoms {
+    display: none;
+}
+
+
+/* login-register部分css */
+
+.login-register {
+    margin-top: 10px;
+}
+
+.login-register input {
+    height: 46px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+}
+
+.login-register button {
+    display: block;
+    height: 46px;
+    background-color: #f56600;
+    border: 0;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.login-register p {
+    text-align: center;
+    color: #ff6700;
+}
+
+.login-register p:hover {
+    cursor: pointer;
+}
+
+.login-reverse {
+    text-align: center;
+    margin-top: 30px;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.login-reverse a {
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login-reverse a:hover {
+    color: #ff6700;
+}
+
+.login-reverse span {
+    width: 1px;
+    height: 18px;
+    border: 1px solid #999;
+    background-color: #999;
+    padding: 0;
+}
+
+.reminder {
+    color: red;
+}
+
+.phoneReminder {
+    display: block;
+    color: red;
+}
+
+
+/* 发送短信按钮 */
+
+.login-register .send {
+    display: block;
+    width: 40%;
+    margin: 0;
+    background-color: rgb(202, 200, 200);
+}
